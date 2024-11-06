@@ -5,40 +5,66 @@
     background-image: url(../images/maze_runner_personagens.jpg);
     background-size:contain;
     background-repeat: no-repeat;
-    width: 1460px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 1460px;
     margin: 0 auto;
     border-radius: 8px;
 
     @media (max-width : 768px) {
-        background-image: url(../images/maze_runner_personagens.jpg);
         padding-top: calc(50vw + 25px);
-        background-size: contain;
-        background-repeat: no-repeat;
         margin-top: -55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 
     .button {
         margin-top: 2vw;
         margin-bottom: 8px;
+
+        @media (max-width : 768px) {
+            margin: 0 auto;
+            width:100%;
+            max-width: 220px;
+            display: block;
+        }
     }
 
     &__content {
-        width: 640px;
+        width: 100%;
+        max-width: 640px;
         margin-top: 144px;
         text-align: center;
 
+        @media (max-width: 768px) {
+            max-width: 80%;
+            margin-top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
         &__branding {
 
-            margin-bottom: 0px;
-
-            img {
-                height: 180px;
-                width: auto;
-            }
+            width: 100%;
+            max-width: 375px;
 
             @media (max-width: 768px) {
-                max-width: 180px;
+                width: 100%;
+                max-width: 100%;
+            }
+
+            img {
+                height: auto;
+                max-width: 100%;
+
+                @media (max-width: 768px) {
+                    width: 220px;
+                }
+
             }
 
         }
@@ -49,26 +75,42 @@
 
         p {
             margin-bottom: 20px;
+
+            @media (max-width: 768px) {
+                width: 100%;
+                max-width: 80%;
+                text-align: center;
+                margin: 0 auto;
+                text-wrap: wrap;
+            }
         }
 
         &__combos {
 
-            width: 380px;
+            width: 100%;
+            max-width: 380px;
             display: flex; 
             flex-direction: column; 
             align-items: center;
             list-style: none;
             padding-top: 60px;
             text-align: center;
-            margin-left: 128px;
+            margin-left: 0 auto;
+
+            @media (max-width: 768px) {
+                padding-top: 30px;
+                margin: 0;
+
+            }
 
             &__combo {
 
+                width: 100%;
+                max-width: 768px;
+                margin-bottom: 24px;
 
-                @media (max-width: 768px){
-                    width: 768px;
-                    max-width: 100%;
-                    margin-bottom: 24px;
+                @media (max-width: 768px) {
+                    max-width: 80%;
                 }
 
                 img {
@@ -84,6 +126,10 @@
     display: flex;
     justify-content: flex-start;
     padding-left: 88px;
+
+    @media (max-width : 768px) {
+        display: none;
+    }
 
     p {
         color: variaveis.$corTextoPrincipal;
